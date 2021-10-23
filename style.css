@@ -1,0 +1,123 @@
+/* colors:
+light : #7ed56f
+medium : #55c57a
+dark : #28b485 */
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  padding: 30px;
+  line-height: 1.7;
+}
+header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 131, 0.8)
+    ),
+    url("images/back2.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+.logo {
+  width: 100px;
+  filter: brightness(100);
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.heading-primary .heading-primary-main {
+  display: block;
+  font-size: 60px;
+  letter-spacing: 15px;
+  animation: right 1s ease-out;
+  backface-visibility: hidden;
+}
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.heading-primary .heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 200;
+  animation: left 1s ease-out;
+  backface-visibility: hidden;
+}
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.button:link,
+.button:visited {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 100px;
+  color: gray;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 100;
+  transition: transform .3s;
+}
+.button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.button:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+.button-white {
+  background-color: white;
+}
